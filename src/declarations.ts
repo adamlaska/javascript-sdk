@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-declare module "is_js" {
+declare module "is-it-check" {
   export const boolean: (a: any) => a is boolean
   export const number: (a: any) => a is number
   export const integer: (a: any) => a is number
@@ -15,7 +15,7 @@ declare module "secure-random" {
 }
 
 declare module "crypto-browserify" {
-  import _crypto from "crypto"
+  import * as _crypto from "crypto"
   const crypto: Pick<
     typeof _crypto,
     | "createHash"

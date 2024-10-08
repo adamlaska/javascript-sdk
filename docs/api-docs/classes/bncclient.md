@@ -1,7 +1,7 @@
 
 # Class: BncClient
 
-The Binance Chain client.
+The BNB Beacon Chain client.
 
 ## Hierarchy
 
@@ -35,6 +35,7 @@ The Binance Chain client.
 * [getSwapByRecipient](bncclient.md#getswapbyrecipient)
 * [getTransactions](bncclient.md#gettransactions)
 * [getTx](bncclient.md#gettx)
+* [getTxs](bncclient.md#gettxs)
 * [initChain](bncclient.md#initchain)
 * [list](bncclient.md#list)
 * [listMiniToken](bncclient.md#listminitoken)
@@ -67,7 +68,7 @@ The Binance Chain client.
 
 Name | Type | Default | Description |
 ------ | ------ | ------ | ------ |
-`server` | string | - | Binance Chain public url |
+`server` | string | - | BNB Beacon Chain public url |
 `useAsyncBroadcast` | boolean | false | use async broadcast mode, faster but less guarantees (default off) |
 `source` | number | 0 | where does this transaction come from (default 0)  |
 
@@ -331,7 +332,7 @@ get open orders for an address
 
 Name | Type | Default | Description |
 ------ | ------ | ------ | ------ |
-`address` | string | this.address! | binance address |
+`address` | string | this.address! | bnb address |
 
 **Returns:** *Promise‹object | never[]›*
 
@@ -415,6 +416,8 @@ ___
 
 get transactions for an account
 
+**`deprecated`** please use getTxs instead.
+
 **Parameters:**
 
 Name | Type | Default | Description |
@@ -443,6 +446,31 @@ Name | Type | Description |
 **Returns:** *Promise‹object | never[]›*
 
 resolves with http response
+
+___
+
+###  getTxs
+
+▸ **getTxs**(`address`: undefined | string, `startTime`: number, `endTime`: number): *Promise‹object | never[]›*
+
+get transactions for an account
+
+**Parameters:**
+
+Name | Type | Default | Description |
+------ | ------ | ------ | ------ |
+`address` | undefined &#124; string | this.address | optional address |
+`startTime` | number | - | start time in milliseconds |
+`endTime` | number | - | end time in milliseconds, endTime - startTime should be smaller than 7 days |
+
+**Returns:** *Promise‹object | never[]›*
+
+resolves with http response ([more details](https://docs.binance.org/api-reference/dex-api/block-service.html#apiv1txs))
+```js
+// Example:
+const client = new BncClient('https://testnet-api.binance.org')
+client.getTxs(...);
+```
 
 ___
 
