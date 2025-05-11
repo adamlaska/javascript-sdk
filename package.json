@@ -19,7 +19,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,json,md,html,yml}\""
   },
   "dependencies": {
-    "@babel/runtime": "^7.10.4",
+    "@babel/runtime": "^7.26.10",
     "@ledgerhq/hw-transport-u2f": "^5.9.0",
     "@ledgerhq/hw-transport-web-ble": "^5.9.0",
     "@types/bech32": "^1.1.2",
@@ -67,7 +67,7 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-transform-async-to-generator": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-env": "^7.27.1",
     "@babel/preset-typescript": "^7.10.4",
     "@types/bech32": "^1.1.2",
     "@types/big.js": "^4.0.5",
