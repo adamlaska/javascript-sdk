@@ -22,7 +22,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/runtime": "^7.10.4",
+    "@babel/runtime": "^7.26.10",
     "@ledgerhq/hw-transport-u2f": "^5.9.0",
     "@ledgerhq/hw-transport-web-ble": "^5.9.0",
     "@types/bech32": "^1.1.2",
